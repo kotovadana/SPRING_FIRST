@@ -1,0 +1,4 @@
+When u create New Project with Spring Boot - three folders automatically are created:
+1) src/main/java - it supposed to be used to save all java source files
+2) src/main/resources - it supposed to be used for TEMPLETES and any other files
+3) src/main/test - is used for tests 
