@@ -70,3 +70,5 @@ ${} is the way to refer to OBJECTS that were passed to the template, using SpEL.
 *{} is the syntax to refer to FIELDS of the object bound to the form.
 
 !!th:fields="*{userName}" --> so thymeleaf SEARCHES field in class RegistrationFields with EXACT name - userName!! not username!!
+
+what does this mean  - th:action="@{/registration}" ???
