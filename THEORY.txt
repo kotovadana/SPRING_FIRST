@@ -23,3 +23,21 @@ It lets you write plain HTML code while also using Java objects for data binding
 Currently all our controller methods feature the @ResponseBody annotation.
 With this annotation in place the String returned by our controller methods gets sent to the browser as plain text.
 If we remove it, the Thymeleaf library will look for an HTML Template with the name returned.
+
+Now we want to pass some data to the template.
+This is done by adding an object and optionally a name to the Model object passed in by the Spring framework.
+Use the addAttribute() method to achieve this.
+The first parameter is the name (key value), the second parameter is an object.
+You will use this name(key value) to refer to this object in the template.
+For the initial form route pass an empty object of the data class you created in the previous exercise.
+Adding model.addAttribute("issuereport", new IssueReport()); to the method getReport().
+Repeating the same for the method submitReport().
+
+In the submitReport() method we also want to handle the data submitted via the form.
+To do this we also need to add IssueReport issueReport to the method parameters.
+
+Since we want the template to show some kind of feedback upon receiving the form data,
+we should also add another attribute containing a boolean.
+If it’s set to true the template will show some kind of modal or confirming message.
+
+Just add another attribute with the name submitted and the value true.
