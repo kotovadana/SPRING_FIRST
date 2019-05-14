@@ -26,7 +26,7 @@ public class RegistrationController {
         return "registration/registration_form";
     }
 
-    @GetMapping ("/firstpage")
+    @GetMapping ("/allusers")
     public String getRegistratedUsersInfo () {
         return "registration/registration_list";
     }

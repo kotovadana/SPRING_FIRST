@@ -41,3 +41,8 @@ we should also add another attribute containing a boolean.
 If it’s set to true the template will show some kind of modal or confirming message.
 
 Just add another attribute with the name submitted and the value true.
+
+
+To use the objects passed in, we need to use specific Thymeleaf HTML syntax in the templates.
+All properties and attributes in an HTML file that are being used by Thymeleaf and are not standard HTML.
+They will begin with the prefix th:

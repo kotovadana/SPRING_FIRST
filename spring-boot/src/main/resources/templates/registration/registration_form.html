@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <title>Registration Form</title>
+    <link rel = "stylesheet" href="./style.css" />
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-registration form should be here
+
+<div class = "container">
+    <form method="post" action="#">
+        <h3>Registration Form</h3>
+        <input type="text" placeholder="Name" id="name"/>
+        <input type="text" placeholder="Last name" id="lastName"/>
+        <input type="text" placeholder="User name" id="userName"/>
+        <small> Create your own unique name! </small>
+        <input type="number" placeholder="Your age" id="age"/>
+        <input type="number" placeholder="Your weight" id="weight"/>
+        <small> Note! Other users will not have the access to this information </small>
+        <input type="number" placeholder="Your height" id="height"/>
+        <input type="email" placeholder="Email" id="email"/>
+        <label for="send_progress">
+            Do you want to receive the statistics about your progress on your email every week?
+            <input type="checkbox" name="sendProgress" id="send_progress"/>
+        </label>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <div class="result_message">
+        <h3> Your registration information has been submitted.</h3>
+        <p> You can check all registrated users <a href="/allusers">here</a></p>
+    </div>
+</div>
 </body>
 </html>

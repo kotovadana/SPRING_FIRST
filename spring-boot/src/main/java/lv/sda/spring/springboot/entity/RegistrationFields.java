@@ -13,8 +13,8 @@ public class RegistrationFields {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private long id;
     private String name;
-    private String last_name;
-    private String username;
+    private String lastName;
+    private String userName;
     private long age;
     private long weight;
     private long height;
@@ -37,20 +37,20 @@ public class RegistrationFields {
         this.name = name;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String last_name) {
+        this.lastName = last_name;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String username) {
+        this.userName = username;
     }
 
     public long getAge() {
