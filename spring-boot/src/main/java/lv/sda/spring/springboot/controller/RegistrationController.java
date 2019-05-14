@@ -11,21 +11,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class RegistrationController {
     //This class will contain the methods responsible for handling incoming web requests
 
-    @GetMapping("/registration")
-    @ResponseBody
+    @GetMapping("/registration") // = resources/templates/registration
     public String getRegistrationInfo() {
-        return "firstpage/registration_form";
+        return "registration/registration_form";
     }
 
     @PostMapping ("/registration")
-    @ResponseBody
     public String submitRegistrationInfo (){
-        return "firstpage/registration_form";
+        return "registration/registration_form";
     }
 
     @GetMapping ("/firstpage")
-    @ResponseBody
     public String getRegistratedUsersInfo () {
-        return "firstpage/registration_list";
+        return "registration/registration_list";
     }
 }
