@@ -15,13 +15,14 @@ public class RegistrationController {
 
     @GetMapping("/registration") // = resources/templates/registration
     public String getRegistrationInfo(Model model) {
-        model.addAttribute("registration_info", new RegistrationFields());
+        model.addAttribute("registrationfields", new RegistrationFields());
+        //in registration_form we reffer to this Object by its key name = "registration_info"
         return "registration/registration_form";
     }
 
     @PostMapping ("/registration")
-    public String submitRegistrationInfo (Model model){
-        model.addAttribute("registration_info", new RegistrationFields());
+    public String submitRegistrationInfo (Model model, RegistrationFields registrationFields){
+        model.addAttribute("registrationfields", new RegistrationFields());
         model.addAttribute("submitted", true);
         return "registration/registration_form";
     }

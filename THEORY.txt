@@ -46,3 +46,27 @@ Just add another attribute with the name submitted and the value true.
 To use the objects passed in, we need to use specific Thymeleaf HTML syntax in the templates.
 All properties and attributes in an HTML file that are being used by Thymeleaf and are not standard HTML.
 They will begin with the prefix th:
+
+
+This does not have any logic or data-binding in it, yet.
+Without the attribute xmlns:th="http://www.thymeleaf.org" in the <html> tag,
+your editor might show warnings because he doesn’t know the attributes prefixed with th:.
+
+Now the file will be served on the route /registration.
+If you have the application still running you can navigate to the route or click the link.
+
+Now we want to tell Spring that this form should populate the fields of 
+the Registrationfields(class) object we passed earlier.
+This is done by adding th:object="${issuereport}" to the <form> tag in issuereport_form.html: 
+<form method="post" th:action="@{/issuereport}" th:object="${issuereport}">
+
+th:action is the syntax for adding the action that should happen upon submission of the form.
+
+This alone will not tell Spring to auto-populate the fields in the object.
+We need to specify in the <input> elements what field this should represent.
+This is done by adding the attribute th:field="*{}".
+
+${} is the way to refer to OBJECTS that were passed to the template, using SpEL.
+*{} is the syntax to refer to FIELDS of the object bound to the form.
+
+!!th:fields="*{userName}" --> so thymeleaf SEARCHES field in class RegistrationFields with EXACT name - userName!! not username!!

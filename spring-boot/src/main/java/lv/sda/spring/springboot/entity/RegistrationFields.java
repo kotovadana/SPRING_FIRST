@@ -1,10 +1,7 @@
 package lv.sda.spring.springboot.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -20,6 +17,18 @@ public class RegistrationFields {
     private long height;
     private String email;
     private Date created;
+    private boolean sendProgress;
+
+
+    public RegistrationFields () {}
+
+    public boolean isSendProgress() {
+        return sendProgress;
+    }
+
+    public void setSendProgress(boolean sendProgress) {
+        this.sendProgress = sendProgress;
+    }
 
     public long getId() {
         return id;
@@ -103,7 +112,7 @@ public class RegistrationFields {
 
     private Date updated;
 
-    public RegistrationFields () {}
+
 
 
 

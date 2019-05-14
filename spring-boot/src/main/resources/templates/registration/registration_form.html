@@ -8,25 +8,26 @@
 <body>
 
 <div class = "container">
-    <form method="post" action="#">
+    <form method="post" action="#" th:object="${registrationfields}" th:action="@{/registrationfields}" >
         <h3>Registration Form</h3>
-        <input type="text" placeholder="Name" id="name"/>
-        <input type="text" placeholder="Last name" id="lastName"/>
-        <input type="text" placeholder="User name" id="userName"/>
+        <input type="hidden" id="id" th:field="*{id}"/>
+        <input type="text" placeholder="Name" id="name" th:field="*{name}"/>
+        <input type="text" placeholder="Last name" id="lastname" th:field="*{lastName}"/>
+        <input type="text" placeholder="User name" id="userName" th:field="*{userName}"/>
         <small> Create your own unique name! </small>
-        <input type="number" placeholder="Your age" id="age"/>
-        <input type="number" placeholder="Your weight" id="weight"/>
+        <input type="number" placeholder="Your age" id="age" th:field="*{id}"/>
+        <input type="number" placeholder="Your weight" id="weight" th:field="*{weight}"/>
         <small> Note! Other users will not have the access to this information </small>
-        <input type="number" placeholder="Your height" id="height"/>
-        <input type="email" placeholder="Email" id="email"/>
+        <input type="number" placeholder="Your height" id="height" th:field="*{height}"/>
+        <input type="email" placeholder="Email" id="email" th:field="*{email}"/>
         <label for="send_progress">
             Do you want to receive the statistics about your progress on your email every week?
-            <input type="checkbox" name="sendProgress" id="send_progress"/>
+            <input type="checkbox" name="sendProgress" id="send_progress" th:field="*{sendProgress}"/>
         </label>
         <input type="submit" value="Submit"/>
     </form>
 
-    <div class="result_message">
+    <div class="result_message" th:if="${submitted}">
         <h3> Your registration information has been submitted.</h3>
         <p> You can check all registrated users <a href="/allusers">here</a></p>
     </div>
