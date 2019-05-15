@@ -8,7 +8,7 @@
 <body>
 
 <div class = "container">
-    <form method="post" action="#" th:object="${registrationfields}" th:action="@{/registration}" >
+    <form method="post" action="#" th:object="${registration_info}" th:action="@{/registration}" >
         <h3>Registration Form</h3>
         <input type="hidden" id="id" th:field="*{id}"/>
         <input type="text" placeholder="Tap your name here" id="name" th:field="*{name}"/>
