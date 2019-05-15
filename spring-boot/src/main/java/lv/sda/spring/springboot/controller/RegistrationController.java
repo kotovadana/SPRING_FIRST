@@ -32,7 +32,7 @@ public class RegistrationController {
 
     @GetMapping ("/allusers")
     public String getRegistratedUsersInfo (Model model) {
-        model.addAttribute("allUsers", this.registrationService.getAllRegFields());
+        model.addAttribute("users", this.registrationService.getAllRegFields());
         return "registration/registration_list";
     }
 }

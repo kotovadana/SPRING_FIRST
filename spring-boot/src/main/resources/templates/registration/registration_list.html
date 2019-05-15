@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title> Registration List </title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <meta charset="UTF-8"/>
 </head>
 <body>
@@ -18,7 +18,7 @@
             <th>Height</th> <!--need to make this column hidden for not ADMIN user-->
             <th>Email</th>
         </tr>
-            <th:block th:each="user : ${allUsers}">
+            <th:block th:each="user : ${users}">
                 <tr>
                     <td th:text="${user.name}"> Names </td>
                     <td th:text="${user.userName}"> User Names </td>

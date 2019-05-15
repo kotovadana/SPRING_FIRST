@@ -19,9 +19,18 @@ public class RegistrationFields {
     private String email;
     private Date created;
     private boolean sendProgress;
+    private boolean privateInfo;
 
 
     public RegistrationFields () {}
+
+    public boolean isPrivateInfo() {
+        return privateInfo;
+    }
+
+    public void setPrivateInfo(boolean privateInfo) {
+        this.privateInfo = privateInfo;
+    }
 
     public boolean isSendProgress() {
         return sendProgress;

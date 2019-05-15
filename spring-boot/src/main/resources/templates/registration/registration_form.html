@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Registration Form</title>
-    <link rel = "stylesheet" href="./style.css" />
+    <link rel = "stylesheet" href="/css/style.css" />
     <meta charset="UTF-8">
 </head>
 <body>
@@ -14,15 +14,21 @@
         <input type="text" placeholder="Tap your name here" id="name" th:field="*{name}"/>
         <input type="text" placeholder="Tap your last name here" id="lastname" th:field="*{lastName}"/>
         <input type="text" placeholder="User name" id="userName" th:field="*{userName}"/>
-        <small> Create your own unique name! </small>
-        <input type="number" placeholder="Your age" min="16" max="100" id="age" th:field="*{id}"/>
-        <input type="number" placeholder="Enter your weight" min="50" id="weight" th:field="*{weight}"/> kg
-        <small> Note! Other users will not have the access to this information </small>
-        <input type="number" placeholder="Your height" min="100" id="height" th:field="*{height}"/> cm
-        <input type="email" placeholder="Email" id="email" th:field="*{email}"/>
+        <hr>
+        <br> <small> <i>Your age : </i></small>
+        <input type="number" min="16" max="100" id="age" th:field="*{id}"/> yo
+        <br> <small> <i>Your weight : </i></small>
+        <input type="number" min="50" id="weight" th:field="*{weight}"/> kg
+        <br> <small> <i>Your height : </i></small>
+        <input type="number" min="100" id="height" th:field="*{height}"/> cm
+        <br> <input type="checkbox" name="privateinfo" id="private_info" th:field="*{privateInfo}"/>
+        <small><i>Do you want other users to see this information?</i> </small> <br>
+        <hr>
+        <br> <input type="email" placeholder="Email" id="email" th:field="*{email}"/>
         <label for="send_progress">
-            Do you want to receive the statistics about your progress on your email every week?
-            <input type="checkbox" name="sendProgress" id="send_progress" th:field="*{sendProgress}"/>
+            <br> <input type="checkbox" name="sendProgress" id="send_progress" th:field="*{sendProgress}"/>
+            <i>Do you want to receive the statistics about your progress on your email every week?</i>
+
         </label>
         <input type="submit" value="Submit"/>
     </form>
