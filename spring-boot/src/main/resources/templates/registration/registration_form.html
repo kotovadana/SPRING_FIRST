@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class = "container">
+<div class = "container" th:unless="${submitted}">
     <form method="post" action="#" th:object="${registration_info}" th:action="@{/registration}" >
         <h3>Registration Form</h3>
         <input type="hidden" id="id" th:field="*{id}"/>
@@ -32,11 +32,11 @@
         </label>
         <input type="submit" value="Submit"/>
     </form>
-
-    <div class="result_message" th:if="${submitted}">
-        <h3> Your registration information has been submitted.</h3>
-        <p> You can check all registrated users <a href="/allusers">here</a></p>
-    </div>
 </div>
+    <div class="resultmessage" th:if="${submitted}">
+        <h3> Your registration information has been submitted.</h3>
+        <p> <i> <small>You can check all registrated users <a href="/allusers">here</a></small></i></p>
+    </div>
+
 </body>
 </html>

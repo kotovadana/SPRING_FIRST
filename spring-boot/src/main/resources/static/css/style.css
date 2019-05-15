@@ -47,6 +47,11 @@ body{
 .container h3{
     margin-bottom: 20px;
 }
+
+.resultmessage {
+ text-align: center;
+}
+
 .container form input[type="submit"]{
     max-width: 250px;
     margin: auto;
