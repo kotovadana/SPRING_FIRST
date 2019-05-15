@@ -72,3 +72,6 @@ ${} is the way to refer to OBJECTS that were passed to the template, using SpEL.
 !!th:fields="*{userName}" --> so thymeleaf SEARCHES field in class RegistrationFields with EXACT name - userName!! not username!!
 
 what does this mean  - th:action="@{/registration}" ???
+
+
+Now we gonna create html page with LIST of all registrated USERS

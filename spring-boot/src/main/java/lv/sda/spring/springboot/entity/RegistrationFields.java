@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table (name = "reg_list")
 public class RegistrationFields {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)

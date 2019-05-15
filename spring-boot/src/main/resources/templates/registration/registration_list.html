@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Registration List </title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8"/>
 </head>
 <body>
-registration list should be here
+<div class="container registration_list">
+    <h2> Users: </h2>
+    <br />
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Age</th>
+            <th>Weight</th> <!--need to make this column hidden for not ADMIN user-->
+            <th>Height</th> <!--need to make this column hidden for not ADMIN user-->
+            <th>Email</th>
+        </tr>
+            <th:block th:each="user : ${allUsers}">
+                <tr>
+                    <td th:text="${user.name}"> Names </td>
+                    <td th:text="${user.userName}"> User Names </td>
+                    <td th:text="${user.age}"> Age </td>
+                    <td th:text="${user.weight}"> Weight, kg </td>
+                    <td th:text="${user.height}"> Height, cm </td>
+                    <td> <a th:href="@{${user.email}}" th:text="§{user.email}"></a></td>                   </td>
+                </tr>
+            </th:block>
+    </table>
+
+            </th:block>
+    </table>
+</div>
 </body>
+
 </html>
