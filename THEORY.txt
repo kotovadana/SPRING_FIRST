@@ -75,3 +75,10 @@ what does this mean  - th:action="@{/registration}" ???
 
 
 Now we gonna create html page with LIST of all registrated USERS
+
+
+This alone would already be enough to fetch all the entries from the database, 
+add new entries and do all basic CRUD operations.
+
+But we want to fetch all entries which are not marked private and show them on the public list view.
+This is done by adding a custom query string to a method. 
