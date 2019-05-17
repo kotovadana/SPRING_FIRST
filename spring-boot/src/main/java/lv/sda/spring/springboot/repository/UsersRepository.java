@@ -7,8 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface UsersRepository extends JpaRepository<RegistrationFields, Long> {
+
     @Query(value = "SELECT i FROM RegistrationFields i WHERE privateInfo = false")
-    List<RegistrationFields> findAllNonPrivateUsers();
+    List<RegistrationFields> findAllNotPrivateUsers();
+
     List<RegistrationFields> findAllPrivateUsers(boolean privateInfo);
     List<RegistrationFields> findAllByEmail(String email);
 
